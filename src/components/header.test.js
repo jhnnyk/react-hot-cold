@@ -7,4 +7,9 @@ describe('<Header />', () => {
   it('renders without crashing', () => {
     shallow(<Header />)
   })
+
+  it('renders the title', () => {
+    const wrapper = shallow(<Header />)
+    expect(wrapper.contains(<h1>HOT or COLD</h1>)).toEqual(true)
+  })
 })
