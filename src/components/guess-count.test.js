@@ -7,4 +7,9 @@ describe("<GuessCount />", () => {
   it("renders without crashing", () => {
     shallow(<GuessCount />);
   });
+
+  it("displays the count", () => {
+    const wrapper = shallow(<GuessCount />);
+    expect(wrapper.find("#count").length).toBe(1);
+  });
 });
